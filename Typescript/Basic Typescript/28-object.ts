@@ -24,7 +24,9 @@ let person: {
 }
 
 // Accessing the object data
-console.log(person.address.country);
+console.log(person.address.country); // Pakistan
+console.log(person['address']['country']); // Pakistan
+
 
 // Updating object properties
 person.address.country = "USA"

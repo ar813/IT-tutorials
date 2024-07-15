@@ -2,28 +2,22 @@
 
 // For setTimeout
 console.log("before acync");
-
-let setTimeoutID = setTimeout(() => {
+let a = setTimeout(() => {
     console.log("Hello");
-})
+},1000)
 
 if (true) {
-    clearTimeout(setTimeoutID)
+    clearTimeout(a)
 }
-console.log(setTimeoutID);
-
 console.log("After acync");
+
 
 // For setInterval
 console.log("before acync");
-
-let setintervelID = setInterval(() => {
+let b = setInterval(() => {
     console.log("Hello");
-})
-
+},1000)
 if (true) {
-    clearTimeout(setintervelID)
+    clearTimeout(b)
 }
-console.log(setintervelID);
-
 console.log("After acync");

@@ -9,13 +9,13 @@ type Student = {
     name: string;
     age: number;
     gender?: string;
-    greet: (country:string)=>string // Call Signature Method
+    greet: (country: string) => string // Call Signature Method
 }
 
 let student1: Student = {
     name: "Arsalan",
     age: 29,
-    greet: (country:string) => {
+    greet: (country: string) => {
         return `Welcome! My name is ${student1.name}, I am ${student1.age} years old. And I am from ${country}`;
     }
 }
@@ -23,7 +23,7 @@ console.log(student1.greet("Pakistan"));
 
 // Its is complecated but its your homework that get information about it.
 const introduction = (value: Student): string => {
-    const { name, age } = value;
+    const { name, age} = value;
     return `Welcome! My name is ${name}, I am ${age} years old.`;
 }
 console.log(introduction(student1));

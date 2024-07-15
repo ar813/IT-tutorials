@@ -11,7 +11,8 @@ async function uploadUser() {
                 name: "name",
                 message: "Enter your name"
             }
-        ])
+        ]
+    )
         .then((hello) => {
             console.log(hello);            
         }).catch((Khan) => {

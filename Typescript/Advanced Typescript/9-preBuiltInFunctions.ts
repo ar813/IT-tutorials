@@ -17,7 +17,7 @@ console.error(userNames);
 
 // v. splice (It can delete or update or add the value in the middle of an array, in the start of an array or in the end of an array)
 // There are three arguments of splice method or function.
-// a. Starting index for deleting ir adding
+// a. Starting index for deleting or adding
 // b. No of deleting index
 // c. if you add some thing you can pass it into third index
 

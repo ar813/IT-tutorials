@@ -1,6 +1,6 @@
 /* ********** Math methods ********** */
 
-// 1. ath.ceil()
+// 1. Math.ceil()
 // ye decimal values per hi kam krta hai
 let ceil = Math.ceil(1.4)
 console.log(ceil); // Output: 2

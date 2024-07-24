@@ -15,8 +15,13 @@ let greet2 = (name:string, id?:number):string => {
     if(id){
         return `Welcom ${name}, your id is ${id}`
     }else{
-        return `Welcom ${name}`
+        return `Welcom ${name} you have no id`
     }
 }
 console.log(greet2("Arsalan")); // Optional Parameter
 console.log(greet2("Arsalan",3)); // Optional Parameter
+
+// Note: 
+// If your parameter has ? (optional ability) OK
+// and = (default ability) OK
+// But if your parameter has both like (a?: number = 1) Error

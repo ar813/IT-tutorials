@@ -4,5 +4,6 @@
 
 let findMaxValue = (array: number[]) => {
     let a = array.reduce((a, b) => a > b ? a : b)
+    return a
 }
 console.log(findMaxValue([1, 2, 3]))

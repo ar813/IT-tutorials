@@ -32,7 +32,7 @@ console.log(person['address']['country']); // Pakistan
 person.address.country = "USA"
 console.log(person.address.country);
 
-// It can replace our original object too means
+// It can replace our original object too (means)
 console.log(person);
 // OutPut: {
 //    name: 'Arsalan',

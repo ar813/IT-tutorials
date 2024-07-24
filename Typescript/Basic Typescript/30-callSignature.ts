@@ -23,7 +23,7 @@ console.log(student1.greet("Pakistan"));
 
 // Its is complecated but its your homework that get information about it.
 const introduction = (value: Student): string => {
-    const { name, age} = value;
+    const {name, age,} = value;
     return `Welcome! My name is ${name}, I am ${age} years old.`;
 }
 console.log(introduction(student1));

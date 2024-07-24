@@ -1,6 +1,6 @@
 /* ********** for in loop ********** */
 
-let forLoop: any = {
+let forInLoop: any = {
     name: "Arsalan",
     age: 18,
     city: "Karachi",
@@ -8,6 +8,6 @@ let forLoop: any = {
     email: "abs@gmail.com"
 }
 
-for (let value in forLoop) {
-    console.log(`${value}: ${forLoop[value]}`);
+for (let value in forInLoop) {
+    console.log(`${value}: ${forInLoop[value]}`);
 }

@@ -1,4 +1,4 @@
-/* ************** How to ignore errors in typescript ************** */
+/* ************** // @ts-ignore ************** */
 let num2 = 5;
 // @ts-ignore
 num1 = "five";

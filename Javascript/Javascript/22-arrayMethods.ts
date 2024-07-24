@@ -33,10 +33,10 @@ console.log(unshiftArray); // Output: ['Shahid', 'Ahmed', 'Arsalan', 'Rafay', 'A
 // 7. concat()
 let array1 = ["Arsalan", "Rafay", "Ayan", "Naeem", "Farooq"]
 let array2 = ["Shahid","Ahmed"]
-let concatArray1 = array1.concat(array2)
-console.log(concatArray1); // Output: [ 'Arsalan', 'Rafay', 'Ayan', 'Naeem', 'Farooq', 'Shahid', 'Ahmed' ]
-let concatArray2 = array2.concat(array1)
-console.log(concatArray2); // Output: ['Shahid', 'Ahmed', 'Arsalan', 'Rafay', 'Ayan', 'Naeem', 'Farooq']
+let concatedArray1 = array1.concat(array2)
+console.log(concatedArray1); // Output: [ 'Arsalan', 'Rafay', 'Ayan', 'Naeem', 'Farooq', 'Shahid', 'Ahmed' ]
+let concatedArray2 = array2.concat(array1)
+console.log(concatedArray2); // Output: ['Shahid', 'Ahmed', 'Arsalan', 'Rafay', 'Ayan', 'Naeem', 'Farooq']
 
 // 8. join()
 let array3 = ["Arsalan", "Rafay", "Ayan", "Naeem", "Farooq"]
@@ -76,7 +76,7 @@ let array6 = ["Arsalan", "Rafay", "Ayan", "Arsalan", "Farooq"]
 let index = array6.indexOf("Arsalan")
 console.log(index); // Output: 0
 
-let index2 = array6.indexOf("Arsalan", 2)
+let index2 = array6.indexOf("Arsalan", 2) // start finding from index 2
 console.log(index2); // Output: 3
 
 // When your value do not exist in you your array, The result will be -1

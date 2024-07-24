@@ -2,7 +2,7 @@
 
 let fruits: string[] = ["Apple", "Banana", "Orange", "Mango"]
 
-// a. Adding elements to an array using push() method at the end of the array. This method can add one or more than one element.
+// a. Adding elements to an array using push() method at the end of the array. This method can add one or more than one elements.
 fruits.push("Watermelon", "Melon")
 console.log(fruits);
 
@@ -36,12 +36,17 @@ for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 
-//* Using for... of
+// Using for... of
 for (let value of fruits) {
     console.log(value);
 }
 
-//! Using array method "forEach"
+// Using array method "forEach"
 fruits.forEach(fruit => {
     console.log(fruit);
 });
+
+// If you want to take index you can use for in loop
+for (let value in fruits){
+    console.log(value)
+}

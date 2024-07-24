@@ -1,6 +1,6 @@
 /* ********** console ********** */
 
-// 1. bconsole.log (This will show in console of inspect)
+// 1. console.log (This will show your code in console of inspect)
 let arrayInFormOfConsole = [3, 5, 6, 4, 3, 5, 7]
 console.log(arrayInFormOfConsole);
 

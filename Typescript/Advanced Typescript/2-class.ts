@@ -21,3 +21,24 @@ let car3: CarType = new Car(500, "Blue")
 console.log(car1);
 console.log(car2);
 console.log(car3);
+
+
+type StudentType = {
+    name: string;
+    age: number;
+    rollNo: number;
+}
+
+class Student  {
+    name: string;
+    age: number;
+    rollNo: number;
+    constructor(name: string, age: number, rollNo: number) {
+        this.name = name
+        this.age = age
+        this.rollNo = rollNo
+    }
+}
+
+let student1: StudentType = new Student("Arsalan", 20, 123)
+let student2: StudentType = new Student("Rafay", 23, 292)

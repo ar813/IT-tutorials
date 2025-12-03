@@ -1,4 +1,5 @@
 /* ************** Importance of types ************** */
+
 // In typescript, types are important
 let num = 10;
 num = "Ten"  // Type 'string' is not assignable to type 'number'.
@@ -6,6 +7,7 @@ num = 55; // Correct, because you are using "number type" in place of "number ty
 console.log(num);
 
 /* ************** Importance of types in funtions ************** */
+
 function sum(a:number, b:number){
     return a + b;
 }

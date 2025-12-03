@@ -40,6 +40,8 @@ let evenNumber = numbers.filter((currentValue) => {
     return currentValue % 2 === 0
 })
 console.log(evenNumber);
+console.log(numbers);
+
 
 // 2: Filtering numbers greater than 3
 let numberGreaterThan3 = numbers.filter((currentValue) => {

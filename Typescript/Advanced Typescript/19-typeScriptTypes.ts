@@ -36,7 +36,7 @@ type Objects = {
     name: string,
     age: number,
 }
-let tupple: [string, number, boolean, Object] = ["Arsalan", 7, true,{name:"Arsalan", age:18}]
+let tupple: [string, number, boolean, Objects] = ["Arsalan", 7, true,{name:"Arsalan", age:18}]
 
 type ObjectInArray = {
     name: string,

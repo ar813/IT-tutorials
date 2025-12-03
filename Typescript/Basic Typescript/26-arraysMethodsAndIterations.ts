@@ -2,7 +2,7 @@
 
 let fruits: string[] = ["Apple", "Banana", "Orange", "Mango"]
 
-// a. Adding elements to an array using push() method at the end of the array. This method can add one or more than one elements.
+// a. Adding elements to an array using push() method at the nd oef the array. This method can add one or more than one elements.
 fruits.push("Watermelon", "Melon")
 console.log(fruits);
 
@@ -14,7 +14,7 @@ console.log(fruits);
 fruits.unshift("Watermelon", "Melon")
 console.log(fruits);
 
-// d. Removing element to an array using pop() method at the start of the array. This method can remove only one first element.
+// d. Removing element to an array using shift() method at the start of the array. This method can remove only one first element.
 fruits.shift()
 console.log(fruits);
 

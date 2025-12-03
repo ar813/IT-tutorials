@@ -7,7 +7,7 @@ index-- // index = index - 1
 console.log(index); //10
 
 /* ************ prefix Increment operator ************ */
-let index1= 10
+let index1 = 10
 ++index1 // index = index + 1
 console.log(index1); // 11
 --index1 // index = index - 1

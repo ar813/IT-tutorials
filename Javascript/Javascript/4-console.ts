@@ -8,7 +8,7 @@ console.log(arrayInFormOfConsole);
 let arrayInFormOfTable = [3, 5, 6, 4, 3, 5, 7]
 console.table(arrayInFormOfTable);
 
-// 3. console.error (It is used to see errors in some specific conditions)
+// 3. console.error (It is used to show errors in some specific conditions)
 console.error("Something went wrong")
 
 // 4. console.warn (It is used to show warnings)

@@ -1,4 +1,5 @@
 /* ************** Even Numbers ************** */
+
 // Check Even Number as a boolean by a function
 function isEven(a:number):boolean{
     return a % 2 == 0

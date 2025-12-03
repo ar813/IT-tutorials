@@ -1,6 +1,6 @@
 /* ********** Function ********** */
 
-function funcName (num1:number, num2:number){
+function funcName (num1:number, num2:number):void{
     let sum = num1 + num2
     //@ts-ignore
     document.write(sum)
@@ -14,5 +14,5 @@ function funcName2 (num1:number, num2:number):number{
     return sum
 } 
 let result = funcName2(36,4)
-    //@ts-ignore
+    // @ts-ignore
 document.write(result)

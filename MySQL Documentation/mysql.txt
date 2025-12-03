@@ -1,0 +1,529 @@
+************* 🖥️ Lesson One *************
+
+1. MySQL is a Database Management System (DBMS).
+Example: A school register is like a database that stores student records.
+
+2. A DBMS helps you Create, Read, Update, and Delete data.
+These actions are often called CRUD operations.
+
+3. SQL stands for Structured Query Language.
+It is the language used to work with databases.
+
+
+************* 🖥️ Lesson Two *************
+
+
+1. First, install the MySQL Community Server.
+(This is the main software for using MySQL.)
+
+2. Then install MySQL Workbench.
+(This is a tool that helps you manage your database with a GUI.)
+
+3. Go to mysql.com to download it.
+
+4. After installing, search for "MySQL Workbench" in Windows and open it.
+
+5. You can also search for "MySQL Shell" if needed.
+(It is another way to use MySQL with commands.)
+
+
+************* 🖥️ Lesson Three *************
+
+
+1. Step 1: Create a new database:
+   
+	create database data_base_name
+
+2. Step 2: Use the database you just created:
+
+	use data_base_name
+
+3. Step 3: Create tables with columns and rows:
+
+	CREATE TABLE table_name (
+		column1 datatype,
+		column2 datatype,
+		column3 datatype,
+		………
+	);
+
+4. Categories of Datatypes that is used by MySQL:
+
+	I. String
+	II.  Numeric
+	III. Data & Time
+
+
+5. 0 = false & 1 = true
+
+6. Plan Before Coding (Paper Schema). Always design your table on paper first. Example Table Name: students_fee
+
+	students_fee
+
+		id,
+		name,
+		father_name,
+		roll_no,
+		gender,
+		fee,
+		contact,
+		address,
+		status
+
+7. Then Write the SQL Code:
+
+	CREATE TABLE students_fee (
+    		id INT UNSIGNED,
+    		name VARCHAR(100),
+    		father_name VARCHAR(100),
+    		roll_no INT,
+   		gender ENUM('male', 'female', 'other'),
+    		fee INT,
+    		contact VARCHAR(20),
+    		address TEXT,
+    		status BOOLEAN
+	);
+
+
+
+************* 🖥️ Lesson Four *************
+
+
+How to insert data into the table?
+
+
+1. Insert single row
+
+	INSERT INTO table_name
+	(column1, column2, column3, ………)
+	VALUES
+	(value1, value2, value3, ………)
+
+	INSERT INTO students_fee
+	(id, name, father_name, roll_no, gender, fee, contact, address, status)
+	VALUES
+	(1, "Muhammad Arsalan Khan", "Muhammad Naeem Khan", 813, "male", 1000, "0309-3678739", "Pakistan", true)
+
+
+2. Insert single row
+
+	INSERT INTO table_name
+	(column1, column2, column3, ………)
+	VALUES
+	(value1, value2, value3, ………),
+	(value1, value2, value3, ………),
+	(value1, value2, value3, ………)
+
+
+	INSERT INTO students_fee
+	(id, name, father_name, roll_no, gender, fee, contact, address, status)
+	VALUES
+	(1, "Muhammad Arsalan Khan", "Muhammad Naeem Khan", 813, "male", 1000, "0309-3678739", "Pakistan", true),
+	(1, "Muhammad Arsalan Khan", "Muhammad Naeem Khan", 813, "male", 1000, "0309-3678739", "Pakistan", true),
+	(1, "Muhammad Arsalan Khan", "Muhammad Naeem Khan", 813, "male", 1000, "0309-3678739", "Pakistan", true)
+
+
+3. You don't need to mention column names if, no of columns = no of values (line wise)
+
+
+	INSERT INTO table_name VALUES
+	(value1, value2, value3, ………)
+
+
+************* 🖥️ Lesson Five *************
+
+
+How to use Select Query (Read Data) ?
+
+
+1. Select some columns:
+	
+	SELECT column1, column2, ……
+	From table_name
+
+
+2. Select all columns:
+
+	SELECT * FROM table_name
+
+3. You can change columns name when read data:
+
+	SELECT name AS "Student Name", father_name AS "Father Name"
+	From table_name
+
+
+************* 🖥️ Lesson Six *************
+
+How to use 'Where clause' to filter data?
+
+- It is used to filter records
+
+- Syntax:
+
+	SELECT column1, column2, ……
+	FROM table_name
+	WHERE condtion
+
+
+- code:
+	SELECT name, father_name, fee
+	FROM students_fee
+	WHERE fee != 1000
+
+
+************* 🖥️ Lesson Seven *************
+
+Table Constraints
+ 
+- used to validate data: NOT NULL, UNIQUE, CHECK, DEFAULT
+
+	CREATE TABLE students
+	(
+		id INT NOT NULL UNIQUE,
+		name VARCHAR(100) NOT NULL,
+		father_name VARCHAR(100) NOT NULL,
+   		age TINYINT CHECK ( age >= 18 ),
+		roll_no INT NOT NULL UNIQUE,
+		gender ENUM('male', 'female', 'other') NOT NULL,
+		status BOOLEAN DEFAULT 1
+	);
+
+
+************* 🖥️ Lesson Eight *************
+
+
+AND operator: if both condition are true then it will return true 
+
+OR operator: if any one condition is true then it will return true 
+
+NOT operator: convert true to false and false to true
+
+
+- Syntax
+
+	SELECT * FROM table name
+	WHERE
+	condn1 AND,OR,NOT condn2
+
+-	SELECT * FROM table name
+	WHERE
+	condn1 AND condn2 AND condn2 
+
+
+************* 🖥️ Lesson Nine *************
+
+IN operator: 
+
+- Allows you to specify multiple values in a WHERE clause. 
+- The IN operator us a shorthand for multiple OR conditions.
+- Means it replaces the OR operator.
+
+- Syntax
+
+	SELECT * FROM table_name
+	WHERE column_name IN
+	(value1, value2, ……)
+
+- select * from students where age=18 or age=21 or age=24
+= select * from students where age in(18,21,24)
+
+
+************* 🖥️ Lesson Ten *************
+
+Like operator: 
+- used with where clause
+
+For this type of operations there are two wild cards:
+
+- (%) represent zero, one, or multiple characters
+- (_) represents one, single character
+
+
+- syntax with code
+
+ 	select * from students where name LIKE "a%"
+
+
+************* 🖥️ Lesson Eleven *************
+
+BETWEEN: WHERE age BETWEEN 20 AND 25
+NOT BETWEEN WHERE age NOT BETWEEN 20 AND 25
+
+- syntax
+
+	SELECT * FROM students WHERE age
+	BETWEEN val1 AND val2
+
+	SELECT * FROM students WHERE age
+	NOT BETWEEN val1 AND val2
+
+
+- there must be range exist like age(25 to 50), temp(0 to 25)
+- string have no range("arsalan" to "khan")
+
+
+
+************* 🖥️ Lesson Twelve *************
+
+1. ORDER BY: ordering data like ascending order(ASC) or descending(DESC)
+
+	SELECT * FROM table_name ORDER BY
+	col_name ASC
+
+	SELECT * FROM table_name ORDER BY
+	col_name DESC
+
+2. DISTINCT: Only filters unique data
+
+- It removes duplicate rows from the result.
+- For example, if you have multiple students and many of them are from the same city like Karachi, Lahore, or Multan, and you want to list the cities only once, you can use DISTINCT.
+
+	SELECT DISTINCT col_name FROM
+	table_name
+
+	SELECT DISTINCT age FROM students
+
+3. ORDER BY and DISTINCT are together
+
+	SELECT DISTINCT age FROM students ORDER BY age ASC
+
+
+************* 🖥️ Lesson Thirteen *************
+
+IS NULL: show the data that have any null value
+IS NOT NULL: show the data that are not null
+
+	SELECT * FROM table_name 
+	WHERE
+	col_name IS NULL
+
+	SELECT * FROM table_name 
+	WHERE
+	col_name IS NOT NULL
+
+	SELECT * FROM table_name 
+	WHERE
+	col_name IS NULL AND col_name IS NOT NULL
+
+
+************* 🖥️ Lesson Fourteen *************
+
+LIMIT: it is used to limit the data. means if you have 100 students you can limit them by 5 or 10 or ...
+
+syntax: SELECT * FROM table_name LIMIT number_to_limit_by_like_5_or_10 
+	SELECT * FROM students WHERE age > 20 LIMIT 5
+
+OFFSET: you can specify an offset from where to start to limit the data
+
+syntax: SELECT * FROM table_name LIMIT number_to_limit_by_like_5_or_10 OFFSET number_of_rows_to_skip
+	SELECT * FROM students LIMIT 5 OFFSET 2
+
+NOTE: here numbers are act as index, for row 1 the number(index) is 0
+
+
+************* 🖥️ Lesson Fifteen *************
+
+Aggregate Functions:
+
+	SELECT count(id) FROM students WHERE fees > 5000
+	SELECT sum(fees) FROM students
+	SELECT avg(fees) FROM students
+	SELECT min(fees) FROM students
+	SELECT max(fees) FROM students
+
+
+************* 🖥️ Lesson Sixteen *************
+
+
+- UPDATE
+
+	UPDATE table_name
+	SET
+	field1 = new_value1,
+	field2 = new_value
+
+	Must use WHERE clause
+
+- 	update students set age = 20 where  id = 10
+
+
+************* 🖥️ Lesson Seventeen *************
+
+- DELETE
+
+	DELETE FROM table_name [WHERE clause]
+	DELETE FROM students WHERE id = 5
+
+
+************* 🖥️ Lesson Eighteen *************
+
+1. PRIMARY KEY (id):
+
+- Always contains unique data
+- It cannot be null
+- There must be a primary key 
+
+syntax: 
+	
+	CREATE TABLE table_name(
+		id INT NOT NULL AUTO_INCREMENT,
+		name VARCHAR(50) NOT NULL,
+		age INT NOT NULL,
+		city VARCHAR(10) NOT NULL،
+		PRIMARY KEY(id)
+	)
+
+2. Foreign Key: Link parent table to child table
+
+	CREATE TABLE table_name(
+		id INT NOT NULL AUTO_INCREMENT,
+		name VARCHAR(50) NOT NULL,
+		age INT NOT NULL,
+		city INT NOT NULL،
+		PRIMARY KEY(id)
+		FOREIGN KEY (city) REFERENCES city (id)
+	)
+
+
+************* 🖥️ Lesson Nineteen *************
+
+
+COMMIT: Saves all the changes made in the current transaction to the database permanently.
+ROLLBACK: Undoes all the changes made in the current transaction and restores the database to its previous state.
+
+
+	SELECT * FROM students;
+	commit;
+	UPDATE students set roll_no = 711 where id = 9;
+	ROLLBACK
+
+
+************* 🖥️ Lesson Twenteen *************
+
+
+INNER JOIN: INNER JOIN is used to return only the matching rows from both tables based on a common column.
+
+✅ Example: Suppose you have two tables:
+
+1. Students
+
+student_id	name
+1	        Arsalan
+2	        Ahmed
+3	        Fatima
+
+2. Marks
+
+student_id      subject	        marks
+1	        Math		95
+2	        Math		85
+4	        Math		90
+
+📌 SQL Query:
+
+SELECT Students.name, Marks.subject, Marks.marks 
+FROM Students
+INNER JOIN Marks ON Students.student_id = Marks.student_id;
+
+📤 Output:
+
+name		subject		marks
+Arsalan		Math		95
+Ahmed		Math		85
+
+- Syntax
+
+	SELECT columns
+	FROM table1
+	INNER JOIN table2 ON condition
+
+
+************* 🖥️ Lesson Twenty-one *************
+
+
+LEFT JOIN: returns all records from the left table (table1), and matched records from the right table (table2) 
+	
+	SELECT column_name(s)
+	FROM table1
+	LEFT JOIN table2 
+	ON 
+	table1.column_name = table2.column_name
+
+RIGHT JOIN: returns all records from the right table (table2), and matched records from the left table (table1) 
+
+	SELECT column_name(s)
+	FROM table1
+	LEFT JOIN table2 
+	ON 
+	table1.column_name = table2.column_name
+
+
+************* 🖥️ Lesson Twenty-two *************
+
+CROSS JOIN: CROSS JOIN returns the Cartesian product of two tables — it combines every row of the first table with every row of the second table.
+
+	SELECT column_name(s)
+	FROM table1
+	CROSS JOIN table2 
+	ON 
+	table1.column_name = table2.column_name
+
+************* 🖥️ Lesson Twenty-three *************
+
+
+How to Join Multiple Tables using MySQL Command?
+
+	SELECT column_name(s)
+	FROM table1
+	INNER JOIN table2 
+	ON table1.column_name = table2.column_name
+	INNER JOIN table2 
+	ON table1.column_name = table2.column_name
+
+
+************* 🖥️ Lesson Twenty-four *************
+
+Subquery:
+
+	SELECT column_name(s)
+	FROM table1
+	WHERE column_name = (SELECT column_name FROM tabl2)
+
+
+EXISTS:
+
+	SELECT column_name(s)
+	FROM table1
+	WHERE EXISTS = (SELECT column_name FROM tabl2)
+
+NOT EXISTS:
+
+	SELECT column_name(s)
+	FROM table1
+	WHERE NOT EXISTS = (SELECT column_name FROM tabl2)
+
+
+************* 🖥️ Lesson Twenty-five *************
+
+
+GROUP BY:
+
+	SELECT column_name(s)
+	FROM table1
+	WHERE condn
+	GROUP BY col_name(s)
+	
+HAVING:
+
+	SELECT column_name(s)
+	FROM table1
+	WHERE condn
+	GROUP BY col_name(s)
+	HAVING condn
+
+
+
+
+
+
+

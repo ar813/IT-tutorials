@@ -1,4 +1,5 @@
 /* ************** String comparision ************** */
+
 let str1 : string = "I am Muhammad Arsalan Khan"; // Lenght 26
 let str2 : string = "Son of Muhammad Naeem Khan"; // Lenght 26
 let areEqual1:boolean = str1 == str2

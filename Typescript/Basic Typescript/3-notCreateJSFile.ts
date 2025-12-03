@@ -1,6 +1,6 @@
 /* ************** If code have any error, no js file create ************** */
 // If you want that when there is an error occurs in your code, no js file create, follow the given instructions
-// step 1: create tsconfig.json file
+// step 1: create tsconfig.json file (tsc --init)
 // step 2: go in tsconfig.json file and then press ctrl + f
 // step 3: type "emiton"
 // step 4: recommit, "noEmitOnError": true, 

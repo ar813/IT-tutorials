@@ -5,7 +5,7 @@
 // And default parameters are specified by providing a default value in the parameter declaration.
 
 // 1. Default Parameter
-let greet1 = (name:string = "Areslan", id:number = 1):string => {
+let greet1 = (name:string = "Arsalan", id:number = 1):string => {
     return `Welcom ${name}, your id is ${id}`
 }
 console.log(greet1("Rafay",2)); // Default Parameters

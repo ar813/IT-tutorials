@@ -10,4 +10,3 @@ let promise2 = new Promise((resolve, reject)=>{
 let promise3 = new Promise((a, b)=>{
     b("Something went wrong")
 }) // reject (Error)
-

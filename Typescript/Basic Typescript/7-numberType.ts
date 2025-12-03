@@ -1,4 +1,5 @@
 /* ************** Number type ************** */
+
 // 1. you can use number type with only numeric values (Positive,Negative or decimal)
 let myNum:number = 34; // Positive value
 let myNegativeNum:number = -34; // Negative value

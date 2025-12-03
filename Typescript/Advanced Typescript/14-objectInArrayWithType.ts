@@ -14,4 +14,6 @@ let car: CarTypes[] = [
         year: 2019
     }
 ]
-console.log(car[1].name);
+
+console.log(car[1].name); // Audi
+console.log(car[1]["name"]); // Audi
